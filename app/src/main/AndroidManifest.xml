@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.laundry">
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_foreground"
+
+        android:roundIcon="@mipmap/ic_launcher_foreground"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Laundryes"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <!-- Splash Activity -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Laundryes"
+            tools:ignore="MissingClass">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Main App Activities -->
+        <activity android:name=".SignInActivity" android:exported="false" android:theme="@style/Theme.Laundryes" />
+        <activity android:name=".MainActivity" android:exported="false" android:theme="@style/Theme.Laundryes" />
+        <activity android:name=".Profile" android:exported="false" android:theme="@style/Theme.Laundryes" />
+        <activity android:name=".FAQActivity" android:exported="false" android:theme="@style/Theme.Laundryes" />
+        <activity android:name=".ContactActivity" android:exported="false" android:theme="@style/Theme.Laundryes" />
+        <activity android:name=".ComplaintActivity" android:exported="false" android:theme="@style/Theme.Laundryes" />
+        <activity android:name=".OrderScreen" android:exported="false" android:theme="@style/Theme.Laundryes" />
+        <activity android:name=".ConfirmationActivity" android:exported="false" android:theme="@style/Theme.Laundryes" />
+        <activity android:name=".SelectPlace" android:exported="false" android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity android:name=".TimeDateActivity" android:exported="false" android:theme="@style/Theme.Laundryes" />
+        <activity android:name=".PaymentActivity" android:exported="false" android:theme="@style/Theme.Laundryes" />
+        <activity android:name=".OnlinePaymentActivity" android:exported="false" android:theme="@style/Theme.Laundryes" />
+
+    </application>
+
+</manifest>
